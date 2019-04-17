@@ -37,13 +37,13 @@ if __name__=="__main__":
       if k=="automod":
           modules = os.environ['LOADEDMODULES'].split(os.pathsep)
           for m in modules:
-              if m.split('/')=="gcc":
+              if m.split('/')[0]=="gcc":
                   GCCMOD = m
-              elif m.split('/')=='python':
+              elif m.split('/')[0]=='python':
                   PYTHONMOD = m
-              elif m.split('/')=="intel":
+              elif m.split('/')[0]=="intel":
                   INTELMOD = m
-              elif m.split('/')=="openmpi":
+              elif m.split('/')[0]=="openmpi":
                   MPIMOD = m
           
           
