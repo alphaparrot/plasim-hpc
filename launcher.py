@@ -73,7 +73,8 @@ if __name__=="__main__":
               break
       if not queued:
           openjobs=False
-          ready=True
+          ready=False
+          print "We have run out of jobs and ARE TRYING TO BREAK"
           break
       ready=False
       f=open("tasklog.crwl","a")
