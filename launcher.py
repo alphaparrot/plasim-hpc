@@ -58,6 +58,7 @@ if __name__=="__main__":
     queued = False
     print "Getting job...."
     while not ready:       #Search for a job to run 
+      queued = False
       for i in range(0,len(tasks)-1):
         if tasks[i]!='':
           if tasks[i][0]!="#":
