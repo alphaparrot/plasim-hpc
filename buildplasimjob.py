@@ -499,6 +499,7 @@ def prep(job):
       edit_namelist(home,"plasim_namelist","NSTPW",str(7200/int(float(val))))
       edit_namelist(home,"plasim_namelist","NSNAPSHOT","1")
       edit_namelist(home,"plasim_namelist","NSTPS",str(21600/int(float(val))))
+      nsn = True
       
     if name=="rayleigh":
       found=True
