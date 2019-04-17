@@ -659,7 +659,8 @@ def prep(job):
   rs.close()
   
 def submit(job):
-  os.system("cd "+workdir+" && "+SUB+" runplasim && cd "+job.top)
+    
+  os.system("cd "+job.home+" && "+SUB+" runplasim && cd "+job.top)
   time.sleep(1.0)
   tag = job.getID()
   job.write()
