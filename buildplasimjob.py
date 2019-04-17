@@ -621,10 +621,6 @@ def prep(job):
   
   # You may have to change this part
   jobscript =(BATCHSCRIPT(job,notify)+
-              "module load gcc/4.9.1                                          \n"+
-              "module load python/2.7.9                                       \n"+
-              "module load intel/intel-17                                       \n"+
-              "module load openmpi/2.0.1-intel-17                               \n"+
               "rm keepgoing                                                     \n"+
               "mkdir /mnt/node_scratch/"+USER+"/"+home+"            \n")
   if nsn:
