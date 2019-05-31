@@ -673,6 +673,7 @@ def prep(job):
       #jobscript+= "python monitor_balance.py                                   \n"
       
   jobscript += ("   python synthoutput.py MOST 1                                      \n"+
+                "   python release-plasim.py "+job.name+"                             \n"+
                 "fi \n")
   
   rs = open(workdir+"/runplasim","w")
