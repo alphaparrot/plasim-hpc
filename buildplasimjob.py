@@ -161,11 +161,11 @@ def prep(job):
   print ("cp identity.py "+workdir+"/")
   os.system("cp identity.py "+workdir+"/")
   
-  #if "cleanup" in job.parameters:
-    #cleanup = job.parameters["cleanup"]
-  #else:
-    #cleanup = 'release-plasim.py'
-  #os.system("cp "+cleanup+" "+workdir+"/")
+  if "cleanup" in job.parameters:
+    cleanup = job.parameters["cleanup"]
+  else:
+    cleanup = 'release-plasim.py'
+  os.system("cp "+cleanup+" "+workdir+"/")
   
   tag = 'all'
   
